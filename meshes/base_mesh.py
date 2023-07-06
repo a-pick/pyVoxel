@@ -1,12 +1,13 @@
 import numpy as np
 
+
 class BaseMesh:
     def __init__(self):
-        self.ctx = None # opengl context
-        self.program = None # shader program
-        self.vbo_format = None # vertex buffer data type format: "3f 3f"
-        self.attrs: tuple[str, ...] = None # attribute names according to the format: ("in_position", "in_color")
-        self.vao = None # vertex array object
+        self.ctx = None  # opengl context
+        self.program = None  # shader program
+        self.vbo_format = None  # vertex buffer data type format: "3f 3f"
+        self.attrs: tuple[str, ...] = None  # attribute names according to the format: ("in_position", "in_color")
+        self.vao = None  # vertex array object
 
     def get_vertex_data(self) -> np.array: ...
 
